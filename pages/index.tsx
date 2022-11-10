@@ -3,7 +3,7 @@ import { FC } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Layout from '../components/layout/Layout';
 
-import { abilityApi, projectApi } from '../api';
+import { myFetchApi } from '../api';
 import { IAbility, IProject } from '../interfaces';
 import { ViewAbilities, ViewAbout, ViewContact, ViewHeader, ViewProjects } from '../views';
 
@@ -34,8 +34,8 @@ export default HomePage;
 
 export const getStaticProps: GetStaticProps = async () => {
 	const [{ data: abilities }, { data: projects }] = await Promise.all([
-		await abilityApi.get<IAbility[]>('/'),
-		await projectApi.get<IProject[]>('/'),
+		await myFetchApi('/ability'),
+		await myFetchApi('/project'),
 	]);
 
 	return {
