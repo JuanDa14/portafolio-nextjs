@@ -32,16 +32,16 @@ const HomePage: FC<Props> = ({ abilities = [], projects = [] }) => {
 
 export default HomePage;
 
-export const getStaticProps: GetStaticProps = async () => {
-	const [{ data: abilities }, { data: projects }] = await Promise.all([
-		await abilityApi.get<IAbility[]>('/'),
-		await projectApi.get<IProject[]>('/'),
-	]);
+// export const getStaticProps: GetStaticProps = async () => {
+// 	const [{ data: abilities }, { data: projects }] = await Promise.all([
+// 		await abilityApi.get<IAbility[]>('/'),
+// 		await projectApi.get<IProject[]>('/'),
+// 	]);
 
-	return {
-		props: {
-			abilities,
-			projects,
-		},
-	};
-};
+// 	return {
+// 		props: {
+// 			abilities,
+// 			projects,
+// 		},
+// 	};
+// };
