@@ -3,6 +3,7 @@
 
 Sitio web personal donde doy a conocer mis habilidades y proyectos desarrollados. Aun en desarrollo 😆
 
+`LINK DEL BACKEND : https://github.com/JuanDa14/portafolio-next-back.git`
 
 ## Screenshots
 
