@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	background-color: #0e0e10;
+	color: white;
+}
+
+.Toastify__progress-bar-theme--dark {
+	background: #84fab0 !important;
+}
+
+.Toastify {
+	font-size: clamp(0.94rem, calc(0.95rem + -0.01vw), 0.94rem);
+}
+
+.typed-cursor {
+	font-size: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem) !important;
+}
+
+.Toastify__toast-body {
+	text-align: center;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #84fab0;
+	border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar {
+	width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+	background: #1e1e1e;
+}
