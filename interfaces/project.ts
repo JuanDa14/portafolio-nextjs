@@ -22,9 +22,9 @@ export interface IProject {
 	_id: string;
 	title: string;
 	description: string;
-	date: string;
 	technologies: string[];
 	imageUrl: string;
 	githubUrl: string;
 	websiteUrl: string;
+	updatedAt: string;
 }

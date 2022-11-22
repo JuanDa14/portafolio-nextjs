@@ -1,13 +1,9 @@
-import { FC } from 'react';
 import { CardListProject } from '../components';
+import { useProject } from '../hooks';
 
-import { IProject } from '../interfaces';
+export const ViewProjects = () => {
+	const { projects } = useProject();
 
-interface Props {
-	projects: IProject[];
-}
-
-export const ViewProjects: FC<Props> = ({ projects }) => {
 	return (
 		<section id='proyectos' className='mt-20'>
 			<article>

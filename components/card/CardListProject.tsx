@@ -7,9 +7,9 @@ interface Props {
 	projects: IProject[];
 }
 
-export const CardListProject: FC<Props> = ({ projects }) => {
+export const CardListProject: FC<Props> = ({ projects = [] }) => {
 	return (
-		<div className='grid grid-cols-fit-250 gap-5 mt-10'>
+		<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10'>
 			{projects.map((project) => (
 				<CardProject key={project._id} {...project} />
 			))}

@@ -16,7 +16,7 @@ export const NavBar = () => {
 	}, [activeLink, router]);
 
 	return (
-		<header className='min-w-full bg-zinc-900 fixed z-50 font-roboto'>
+		<header className='min-w-full font-roboto border-b border-twitch-light shadow-lg'>
 			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:px-10 lg:max-w-[1200px] xl:max-w-[1400px]'>
 				<div className='text-step-1'>
 					<Link href='#inicio' passHref legacyBehavior>

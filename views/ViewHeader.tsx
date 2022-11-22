@@ -28,7 +28,7 @@ export const ViewHeader = () => {
 
 	return (
 		<section className='pt-5'>
-			<article className='flex items-center justify-between flex-col gap-5 mt-24 md:flex-row'>
+			<article className='flex items-center justify-between flex-col gap-5 mt-10 md:flex-row'>
 				<div className='w-full md:w-6/12'>
 					<h1 className='text-step-4 font-bold capitalize bg-gradient-to-r from-green-main to bg-cyan-main bg-clip-text text-transparent'>
 						JuanCode
@@ -43,7 +43,7 @@ export const ViewHeader = () => {
 						aprendizaje.
 					</p>
 					<div className='mt-3 text-step-1 flex justify-between items-center gap-6'>
-						<ul className='flex gap-5'>
+						<ul className='flex gap-3'>
 							<li className='hover:-translate-y-1 transition-transform duration-300'>
 								<Link
 									href='https://www.linkedin.com/in/juan-david-morales-paredes-617342224'
@@ -75,10 +75,23 @@ export const ViewHeader = () => {
 								href='/CV - Juan Morales.pdf'
 								download
 								type='button'
-								className='text-step-0 flex items-center text-center gap-2 px-4 py-1 rounded-lg bg-white  text-twitch-dark font-semibold'
+								className=' flex items-center gap-1 border rounded-md py-2 px-3 text-base text-white font-bold disabled:border-gray-500 disabled:text-gray-500 hover:border-green-main hover:text-green-main transition-colors duration-300 ease-in-out'
 							>
 								<span>Descargar CV</span>
-								<HiOutlineDownload />
+								<svg
+									xmlns='http://www.w3.org/2000/svg'
+									fill='none'
+									viewBox='0 0 24 24'
+									strokeWidth={1.5}
+									stroke='currentColor'
+									className='w-6 h-6'
+								>
+									<path
+										strokeLinecap='round'
+										strokeLinejoin='round'
+										d='M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3'
+									/>
+								</svg>
 							</a>
 						</div>
 					</div>

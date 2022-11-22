@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: #0e0e10;
 	color: white;
@@ -16,7 +20,14 @@ body {
 }
 
 .typed-cursor {
-	font-size: clamp(1.2rem, calc(1.1rem + 0.47vw), 1.67rem) !important;
+	font-size: clamp(1.35rem, calc(1.17rem + 0.88vw), 2.22rem) !important;
+}
+
+.line-clamp {
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
 }
 
 .Toastify__toast-body {

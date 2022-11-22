@@ -1,27 +1,28 @@
 import { useState } from 'react';
-import { toast } from 'react-toastify';
 import Lottie from 'lottie-react';
 
+import { sendEmail, DataEmail } from '../utils';
 import { contact } from '../public/lottie';
 
-type valuesByForm = {
-	name: string;
-	email: string;
-	title: string;
-	description: string;
-};
-
 export const ViewContact = () => {
-	const [values, setValues] = useState<valuesByForm>({
+	const [values, setValues] = useState<DataEmail>({
 		name: '',
 		email: '',
-		title: '',
-		description: '',
+		subject: '',
+		message: '',
 	});
 
 	const [loading, setLoading] = useState(false);
 
-	const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {};
+	const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		setLoading(true);
+
+		await sendEmail(values);
+
+		setLoading(false);
+	};
 
 	return (
 		<section className='mt-20 flex items-center justify-between' id='contacto'>
@@ -40,6 +41,7 @@ export const ViewContact = () => {
 						name='name'
 						onChange={(e) => setValues({ ...values, name: e.target.value })}
 						required
+						autoComplete='off'
 					/>
 					<input
 						className='block w-full p-3 bg-zinc-900 text-gray-400 mb-4 rounded-md text-step--1'
@@ -47,21 +49,24 @@ export const ViewContact = () => {
 						placeholder='Correo electronico'
 						name='email'
 						onChange={(e) => setValues({ ...values, email: e.target.value })}
+						autoComplete='off'
 						required
 					/>
 					<input
 						className='block w-full p-3 bg-zinc-900 text-gray-400 mb-4 rounded-md text-step--1'
 						type='text'
 						placeholder='Asunto'
-						name='title'
-						onChange={(e) => setValues({ ...values, title: e.target.value })}
+						name='subject'
+						onChange={(e) => setValues({ ...values, subject: e.target.value })}
+						autoComplete='off'
 						required
 					/>
 					<textarea
 						placeholder='Mensaje'
 						className='block w-full p-3 bg-zinc-900 text-gray-400 mb-4 rounded-md resize-none h-36 text-step--1'
-						name='description'
-						onChange={(e) => setValues({ ...values, description: e.target.value })}
+						name='message'
+						onChange={(e) => setValues({ ...values, message: e.target.value })}
+						autoComplete='off'
 						required
 					/>
 					<div className='w-full flex justify-end'>
@@ -75,7 +80,7 @@ export const ViewContact = () => {
 					</div>
 				</form>
 			</div>
-			<div className='hidden md:flex w-6/12 mx-auto'>
+			<div className='hidden md:flex w-6/12 mx-auto relative'>
 				<Lottie animationData={contact} loop={true} />
 			</div>
 		</section>
