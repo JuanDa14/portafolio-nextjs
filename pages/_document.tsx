@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
 	render() {
 		return (
-			<Html>
+			<Html lang='en' className='animate__animated animate__fadeIn'>
 				<Head>
 					<link rel='preconnect' href='https://fonts.googleapis.com' />
 					<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin={'true'} />
@@ -22,7 +22,7 @@ class MyDocument extends Document {
 						href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
 					/>
 				</Head>
-				<body className='animate__animated animate__fadeIn'>
+				<body>
 					<Main />
 					<NextScript />
 				</body>
