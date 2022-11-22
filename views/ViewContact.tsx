@@ -21,6 +21,13 @@ export const ViewContact = () => {
 
 		await sendEmail(values);
 
+		setValues({
+			name: '',
+			email: '',
+			subject: '',
+			message: '',
+		});
+
 		setLoading(false);
 	};
 
@@ -42,6 +49,7 @@ export const ViewContact = () => {
 						onChange={(e) => setValues({ ...values, name: e.target.value })}
 						required
 						autoComplete='off'
+						value={values.name}
 					/>
 					<input
 						className='block w-full p-3 bg-zinc-900 text-gray-400 mb-4 rounded-md text-step--1'
@@ -51,6 +59,7 @@ export const ViewContact = () => {
 						onChange={(e) => setValues({ ...values, email: e.target.value })}
 						autoComplete='off'
 						required
+						value={values.email}
 					/>
 					<input
 						className='block w-full p-3 bg-zinc-900 text-gray-400 mb-4 rounded-md text-step--1'
@@ -60,6 +69,7 @@ export const ViewContact = () => {
 						onChange={(e) => setValues({ ...values, subject: e.target.value })}
 						autoComplete='off'
 						required
+						value={values.subject}
 					/>
 					<textarea
 						placeholder='Mensaje'
@@ -68,6 +78,7 @@ export const ViewContact = () => {
 						onChange={(e) => setValues({ ...values, message: e.target.value })}
 						autoComplete='off'
 						required
+						value={values.message}
 					/>
 					<div className='w-full flex justify-end'>
 						<button
