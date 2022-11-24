@@ -1,4 +1,4 @@
-import { FC, useReducer, useEffect, useState } from 'react';
+import { FC, useReducer, useEffect } from 'react';
 import { myApi } from '../../api';
 import { IProject } from '../../interfaces';
 import { ProjectContext } from './ProjectContext';
@@ -15,13 +15,10 @@ interface Props {
 
 export const ProjectProvider: FC<Props> = ({ children }) => {
 	const [state, dispatch] = useReducer(projectReducer, PROJECT_INITIAL_STATE);
-	const [loading, setLoading] = useState(false);
 
 	const getProjects = async () => {
-		setLoading(true);
 		const { data } = await (await myApi.get('/project')).data;
 		dispatch({ type: '[PROJECT] - Get-Projects', payload: data });
-		setLoading(false);
 	};
 
 	useEffect(() => {
@@ -32,7 +29,6 @@ export const ProjectProvider: FC<Props> = ({ children }) => {
 		<ProjectContext.Provider
 			value={{
 				...state,
-				loading,
 				// Metodos
 			}}
 		>
