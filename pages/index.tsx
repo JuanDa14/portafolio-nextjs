@@ -1,6 +1,6 @@
 import { ToastContainer } from 'react-toastify';
-import Layout from '../components/layout/Layout';
 
+import Layout from '../components/layout/Layout';
 import { ViewAbilities, ViewAbout, ViewContact, ViewHeader, ViewProjects } from '../views';
 
 const HomePage = () => {

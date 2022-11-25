@@ -1,6 +1,6 @@
 export const CardSkeletonAbility = () => {
 	return (
-		<div className='space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:flex md:items-center'>
+		<div className='animate-pulse flex items-center'>
 			<div className='flex justify-center items-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700'>
 				<svg
 					className='w-12 h-12 text-gray-200'
