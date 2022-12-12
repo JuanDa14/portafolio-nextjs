@@ -1,13 +1,13 @@
 
 # Portafolio
 
-Sitio web personal donde doy a conocer mis habilidades y proyectos desarrollados. Aun en desarrollo 😆
+Sitio web personal donde doy a conocer mis habilidades y proyectos desarrollados 😆
 
 `LINK DEL BACKEND : https://github.com/JuanDa14/portafolio-next-back.git`
 
-## Screenshots
+## Capturas
 
-![App Screenshot](https://res.cloudinary.com/dbvyaguam/image/upload/v1668108011/Desktop_10-11-2022_14-19-51-72_oysmls.png)
+![App Screenshot](https://res.cloudinary.com/dbvyaguam/image/upload/v1670816641/portafolio_ndjqek.png)
 
 
 ## Variables de entorno
@@ -17,43 +17,35 @@ Para ejecutar este proyecto, deberá agregar las siguientes variables de entorno
 `NEXT_PUBLIC_API_URL ` = URL de su backend
 
 
-
-
-## Author
-
-- [@JuanDa14(https://github.com/JuanDa14)]
-
-
-
 ## 🛠 Skills
 NextJs, TypeScript, React, TailwindCss 😉
 
 
-## Optimizations
+## Optimizaciones
 
 Mejoras en el SEO, Buenas Practicas y Accesibilidad
 
-## Run Locally
+## Ejecutar Localmente
 
-Clone the project
+Clonar el proyecto
 
 ```bash
   git clone https://github.com/JuanDa14/portafolio-nextjs.git
 ```
 
-Go to the project directory
+Ir a la carpeta clonada
 
 ```bash
   cd my-project
 ```
 
-Install dependencies
+Instalar las dependencias
 
 ```bash
   npm install
 ```
 
-Start the server
+Ejecutar el servidor
 
 ```bash
   npm run dev
@@ -62,12 +54,12 @@ Start the server
 
 ## Tech Stack
 
-**Client:** Nextjs, TailwindCSS
+**Client:** Nextjs, TyeScript, TailwindCSS, ContextAPI
 
-**Server:** Node, Express, TyeScript, Mongoose
+**Server:** Node, Express, TyeScript, Mongoose, MongoDB
 
 
-## Deployment
+## Produccion
 
 Para implementar este proyecto en produccion, ejecute
 
@@ -78,7 +70,7 @@ Para implementar este proyecto en produccion, ejecute
 ```bash
   npm run start
 ```
-## API Reference
+## Referencias de la API
 
 #### Obtener todas las habilidades
 
