@@ -15,21 +15,23 @@ export const CardProject: FC<IProject> = ({
 	updatedAt,
 }) => {
 	return (
-		<div className='bg-twitch-light/30 hover:bg-twitch-light/40 border border-zinc-800 rounded-lg shadow-md hover:cursor-pointer transition-colors duration-300 ease-in-out'>
+		<li className=' list-none bg-twitch-light/30 hover:bg-twitch-light/40 border border-zinc-800 rounded-lg shadow-md hover:cursor-pointer transition-colors duration-300 ease-in-out'>
 			<Link href={websiteUrl} target='_blank'>
 				<div>
-					<Image
-						className='rounded-t-lg h-full max-h-[250px]  object-cover'
-						src={imageUrl}
-						alt={title}
-						width={500}
-						height={250}
-					/>
+					<figure>
+						<Image
+							className='rounded-t-lg h-[12.5rem] max-h-[13rem] object-cover object-center w-full '
+							src={imageUrl}
+							alt={title}
+							width={500}
+							height={200}
+						/>
+					</figure>
 					<div>
 						<div className='px-5 py-5'>
-							<h1 className='font-bold text-step-0 whitespace-nowrap text-ellipsis overflow-hidden text-green-main mb-2'>
+							<h2 className='font-bold text-step-0 whitespace-nowrap text-ellipsis overflow-hidden text-green-main mb-2'>
 								{title}
-							</h1>
+							</h2>
 							<p className='text-step--1 font-semibold flex gap-2 mb-2'>
 								<span className='whitespace-nowrap text-ellipsis overflow-hidden'>
 									Ultima actualizacion:{' '}
@@ -43,14 +45,15 @@ export const CardProject: FC<IProject> = ({
 								</span>
 								<div className='flex justify-between items-center w-full'>
 									{technologies.map((technology, index) => (
-										<Image
-											key={index}
-											alt={`${technology.toLowerCase()}`}
-											src={`${technology}`}
-											width={25}
-											height={25}
-											className='border border-zinc-800 rounded-full max-w-[25px] max-h-[25px]'
-										/>
+										<figure key={index}>
+											<Image
+												alt={`${technology.toLowerCase()}`}
+												src={`${technology}`}
+												width={25}
+												height={25}
+												className='border border-zinc-800 rounded-full max-w-[25px] max-h-[25px]'
+											/>
+										</figure>
 									))}
 								</div>
 							</div>
@@ -67,6 +70,6 @@ export const CardProject: FC<IProject> = ({
 					Visite el código fuente en GitHub.
 				</Link>
 			</div>
-		</div>
+		</li>
 	);
 };

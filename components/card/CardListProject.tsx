@@ -17,17 +17,17 @@ export const CardListProject: FC<Props> = ({ projects }) => {
 	return (
 		<>
 			{loading ? (
-				<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10'>
+				<ul className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10'>
 					{skeletonProjects.map((_, i) => (
 						<CardSkeletonProject key={i} />
 					))}
-				</div>
+				</ul>
 			) : (
-				<div className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10'>
+				<ul className='grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10'>
 					{projects.map((project) => (
 						<CardProject key={project._id} {...project} />
 					))}
-				</div>
+				</ul>
 			)}
 		</>
 	);

@@ -33,8 +33,8 @@ export const ViewContact = () => {
 
 	return (
 		<section className='mt-20 flex items-center justify-between' id='contacto'>
-			<div>
-				<h3 className='font-bold capitalize text-step-1 mb-5'>Contáctame</h3>
+			<article>
+				<h2 className='font-bold capitalize text-step-1 mb-5'>Contáctame</h2>
 				<p className='mb-5 text-step--1'>
 					Me interesan los proyectos que involucren el desarrollo de software, la creación de
 					aplicaciones web y móviles. Si quieres contactarme no dudes en utilizar el formulario
@@ -90,10 +90,10 @@ export const ViewContact = () => {
 						</button>
 					</div>
 				</form>
-			</div>
-			<div className='hidden md:flex w-6/12 mx-auto relative'>
+			</article>
+			<article className='hidden md:flex w-6/12 mx-auto relative'>
 				<Lottie animationData={contact} loop={true} />
-			</div>
+			</article>
 		</section>
 	);
 };

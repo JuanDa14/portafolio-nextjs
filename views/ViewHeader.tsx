@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Lottie from 'lottie-react';
 import Typed, { TypedOptions } from 'typed.js';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
-import { HiOutlineDownload } from 'react-icons/hi';
 import { coder } from '../public/lottie';
 
 const options: TypedOptions = {

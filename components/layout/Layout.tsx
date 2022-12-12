@@ -22,7 +22,7 @@ const Layout: FC<Props> = ({ children, title = 'JuanCode' }) => {
 				/>
 				<meta
 					name='keywords'
-					content='JuanCode, Desarrollo web, Portafolio, Pagina Web, Proyectos,Frontend, Backend, Developer'
+					content='JuanCode, Juan Morales, Juan David Morales, Juan David Morales Paredes, Portafolio, Portafolio de Juan Morales'
 				/>
 				<meta property='og:title' content='JuanCode' />
 				<meta

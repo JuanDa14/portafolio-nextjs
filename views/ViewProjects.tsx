@@ -7,7 +7,7 @@ export const ViewProjects = () => {
 	return (
 		<section id='proyectos' className='mt-20'>
 			<article>
-				<h3 className='font-bold capitalize text-step-1'>Proyectos</h3>
+				<h2 className='font-bold capitalize text-step-1'>Proyectos</h2>
 				<CardListProject projects={projects} />
 			</article>
 		</section>

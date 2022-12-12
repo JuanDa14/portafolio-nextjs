@@ -1,6 +1,6 @@
 export const CardSkeletonAbility = () => {
 	return (
-		<div className='animate-pulse flex items-center'>
+		<li className='list-none animate-pulse flex items-center'>
 			<div className='flex justify-center items-center w-full h-48 bg-gray-300 rounded sm:w-96 dark:bg-gray-700'>
 				<svg
 					className='w-12 h-12 text-gray-200'
@@ -13,13 +13,13 @@ export const CardSkeletonAbility = () => {
 				</svg>
 			</div>
 			<span className='sr-only'>Loading...</span>
-		</div>
+		</li>
 	);
 };
 
 export const CardSkeletonProject = () => {
 	return (
-		<div className='animate-pulse mb-2'>
+		<li className='list-none animate-pulse mb-2'>
 			<div className='h-[185px] flex justify-center items-center rounded bg-gray-700 mb-3'>
 				<svg
 					className='w-12 h-12 text-gray-200'
@@ -40,6 +40,6 @@ export const CardSkeletonProject = () => {
 				<div className='h-2 bg-gray-200 rounded-full dark:bg-gray-700 max-w-[360px]'></div>
 			</div>
 			<span className='sr-only'>Loading...</span>
-		</div>
+		</li>
 	);
 };
