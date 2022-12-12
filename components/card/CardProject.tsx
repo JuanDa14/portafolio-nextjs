@@ -20,7 +20,7 @@ export const CardProject: FC<IProject> = ({
 				<div>
 					<figure>
 						<Image
-							className='rounded-t-lg h-[12.5rem] max-h-[13rem] object-cover object-center w-full '
+							className='rounded-t-lg h-[200px] max-h-[200px] object-cover object-center w-full '
 							src={imageUrl}
 							alt={title}
 							width={500}
