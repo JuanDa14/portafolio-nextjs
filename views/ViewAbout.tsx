@@ -1,8 +1,11 @@
+import Lottie from 'lottie-react';
+import { computer } from '../public/lottie';
+
 export const ViewAbout = () => {
 	return (
-		<section className='my-20 bg-about_image bg-cover bg-no-repeat bg-fixed absolute right-0 left-0'>
-			<article className='bg-twitch-light/60 py-10'>
-				<div className='flex flex-col gap-4 px-5 lg:px-10 lg:max-w-[1200px] xl:max-w-[1400px] mx-auto'>
+		<section className='mt-24 rounded-lg shadow-sm'>
+			<article className='w-full flex flex-row-reverse items-center gap-5 bg-zinc-900/50'>
+				<div className='flex-1 flex flex-col gap-4 justify-center  px-5 py-10 md:px-10 md:py-10'>
 					<h2 className='capitalize font-bold text-step-2'>¿Quién soy?</h2>
 					<p className='text-gray-400 text-step-0'>
 						Apasionado, Empático, Responsable, Amante del desarrollo web.
@@ -17,6 +20,13 @@ export const ViewAbout = () => {
 						de Base de Datos.
 					</p>
 				</div>
+				{/* //Rotar la imagen de la derecha a la izquierda */}
+				<Lottie
+					className='flex-1 hidden md:flex items-center justify-center max-w-[400px] border-r-[1px] border-zinc-800'
+					renderer='svg'
+					animationData={computer}
+					loop={true}
+				/>
 			</article>
 		</section>
 	);

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import Link from 'next/link';
 
 import Lottie from 'lottie-react';
+
 import Typed, { TypedOptions } from 'typed.js';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
 import { coder } from '../public/lottie';
@@ -69,11 +70,10 @@ export const ViewHeader = () => {
 								</Link>
 							</li>
 						</ul>
-						<div>
+						<Link href='/CV - Juan Morales.pdf' passHref legacyBehavior>
 							<a
-								href='/CV - Juan Morales.pdf'
-								download
-								type='button'
+								download='Curriculum'
+								target='_blank'
 								className=' flex items-center gap-1 border rounded-md py-2 px-3 text-base text-white font-bold disabled:border-gray-500 disabled:text-gray-500 hover:border-green-main hover:text-green-main transition-colors duration-300 ease-in-out'
 							>
 								<span>Descargar CV</span>
@@ -92,11 +92,11 @@ export const ViewHeader = () => {
 									/>
 								</svg>
 							</a>
-						</div>
+						</Link>
 					</div>
 				</div>
 				<div className='w-6/12 max-w-[400px]'>
-					<Lottie animationData={coder} loop={true} async />
+					<Lottie renderer='svg' animationData={coder} loop={true} />
 				</div>
 			</article>
 		</section>

@@ -15,16 +15,17 @@ export const CardProject: FC<IProject> = ({
 	updatedAt,
 }) => {
 	return (
-		<li className=' list-none bg-twitch-light/30 hover:bg-twitch-light/40 border border-zinc-800 rounded-lg shadow-md hover:cursor-pointer transition-colors duration-300 ease-in-out'>
+		<li className=' list-none bg-twitch-light/30 border border-zinc-800 rounded-lg shadow-md hover:scale-[1.02] hover:cursor-pointer transition-transform duration-300 ease-in-out'>
 			<Link href={websiteUrl} target='_blank'>
 				<div>
 					<figure>
 						<Image
-							className='rounded-t-lg h-[200px] max-h-[200px] object-cover object-center w-full '
+							priority
+							className='rounded-t-lg w-full h-56 object-cover object-center'
 							src={imageUrl}
 							alt={title}
 							width={500}
-							height={200}
+							height={500}
 						/>
 					</figure>
 					<div>

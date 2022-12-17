@@ -1,11 +1,14 @@
+import { FC } from 'react';
 import { CardListAbility } from '../components';
-import { useAbility } from '../hooks';
+import { IAbility } from '../interfaces';
 
-export const ViewAbilities = () => {
-	const { abilities } = useAbility();
+interface Props {
+	abilities: IAbility[];
+}
 
+export const ViewAbilities: FC<Props> = ({ abilities }) => {
 	return (
-		<section className='mt-[28rem]' id='conocimientos'>
+		<section className='my-28' id='conocimientos'>
 			<article>
 				<h2 className='capitalize font-semibold text-step-1 mb-10'>Conocimientos</h2>
 				<div className='flex flex-col gap-10 capitalize text-step-0'>

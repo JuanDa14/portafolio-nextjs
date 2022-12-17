@@ -4,13 +4,15 @@ import Lottie from 'lottie-react';
 import { sendEmail, DataEmail } from '../utils';
 import { contact } from '../public/lottie';
 
+const initialState = {
+	name: '',
+	email: '',
+	subject: '',
+	message: '',
+};
+
 export const ViewContact = () => {
-	const [values, setValues] = useState<DataEmail>({
-		name: '',
-		email: '',
-		subject: '',
-		message: '',
-	});
+	const [values, setValues] = useState<DataEmail>(initialState);
 
 	const [loading, setLoading] = useState(false);
 
@@ -21,12 +23,7 @@ export const ViewContact = () => {
 
 		await sendEmail(values);
 
-		setValues({
-			name: '',
-			email: '',
-			subject: '',
-			message: '',
-		});
+		setValues(initialState);
 
 		setLoading(false);
 	};
@@ -86,7 +83,7 @@ export const ViewContact = () => {
 							className='border rounded-md py-2 px-3 text-step--1 text-white font-bold disabled:border-gray-500 disabled:text-gray-500 hover:border-green-main hover:text-green-main transition-colors duration-300'
 							type='submit'
 						>
-							Enviar Mensaje
+							{loading ? 'Enviando...' : 'Enviar Mensaje'}
 						</button>
 					</div>
 				</form>

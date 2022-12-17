@@ -18,15 +18,15 @@ export const NavBar = () => {
 	return (
 		<header className='min-w-full font-roboto border-b border-twitch-light shadow-lg'>
 			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:px-10 lg:max-w-[1200px] xl:max-w-[1400px]'>
-				<div className='text-step-1'>
+				<div className='hidden sm:flex text-step-1'>
 					<Link href='#inicio' passHref legacyBehavior>
 						<a className='cursor-pointer'>
 							<BsCodeSlash />
 						</a>
 					</Link>
 				</div>
-				<nav>
-					<ul className='flex justify-between items-center gap-5 text-step--1 font-bold'>
+				<nav className='w-full sm:w-auto'>
+					<ul className='gap-0 flex justify-between items-center sm:gap-5 text-step--1 font-bold'>
 						<li>
 							<Link href='#conocimientos' passHref legacyBehavior>
 								<a
