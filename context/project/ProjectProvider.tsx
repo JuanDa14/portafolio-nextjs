@@ -1,7 +1,9 @@
 import { FC, useReducer, useEffect, useState } from 'react';
+import { ProjectContext } from './ProjectContext';
+import { projectReducer } from './projectReducer';
+
 import { myApi } from '../../api';
 import { IProject } from '../../interfaces';
-import { projectReducer, ProjectContext } from './';
 
 export interface ProjectState {
 	projects: IProject[];
@@ -21,6 +23,7 @@ export const ProjectProvider: FC<Props> = ({ children }) => {
 	const getProjects = async () => {
 		setLoading(true);
 		const { data } = await myApi.get<IProject[]>('/project');
+		console.log(data, 'projects');
 		dispatch({ type: '[PROJECT] - Get-Projects', payload: data });
 		setLoading(false);
 	};

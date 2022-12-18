@@ -1,5 +1,6 @@
+import { AbilityState } from './AbilityProvider';
+
 import { IAbility } from '../../interfaces';
-import { AbilityState } from './';
 
 type AbilityActionType = { type: '[ABILITY] - Get-Abilities'; payload: IAbility[] };
 

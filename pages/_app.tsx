@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
-import { AbilityProvider, ProjectProvider } from '../context';
+import { AbilityProvider } from '../context/ability';
+import { ProjectProvider } from '../context/project';
 
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/globals.css';

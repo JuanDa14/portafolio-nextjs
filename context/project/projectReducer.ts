@@ -1,5 +1,6 @@
+import { ProjectState } from './ProjectProvider';
+
 import { IProject } from '../../interfaces';
-import { ProjectState } from './';
 
 type ProjectActionType = { type: '[PROJECT] - Get-Projects'; payload: IProject[] };
 
