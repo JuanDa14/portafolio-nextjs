@@ -1,0 +1,42 @@
+import { FC, useReducer, useEffect, useState } from 'react';
+import { myApi } from '../../api';
+import { IAbility } from '../../interfaces';
+import { AbilityContext, abilityReducer } from './';
+
+export interface AbilityState {
+	abilities: IAbility[];
+}
+const ABILITY_INITIAL_STATE: AbilityState = { abilities: [] };
+
+interface Props {
+	children: JSX.Element;
+}
+
+export const AbilityProvider: FC<Props> = ({ children }) => {
+	const [state, dispatch] = useReducer(abilityReducer, ABILITY_INITIAL_STATE);
+
+	const [loading, setLoading] = useState(false);
+
+	const getAbilities = async () => {
+		setLoading(true);
+		const { data } = await myApi.get<IAbility[]>('/ability');
+		dispatch({ type: '[ABILITY] - Get-Abilities', payload: data });
+		setLoading(false);
+	};
+
+	useEffect(() => {
+		getAbilities();
+	}, []);
+
+	return (
+		<AbilityContext.Provider
+			value={{
+				...state,
+				loading,
+				// Metodos
+			}}
+		>
+			{children}
+		</AbilityContext.Provider>
+	);
+};

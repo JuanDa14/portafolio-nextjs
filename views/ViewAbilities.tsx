@@ -1,12 +1,9 @@
-import { FC } from 'react';
 import { CardListAbility } from '../components';
-import { IAbility } from '../interfaces';
+import { useAbility } from '../hooks';
 
-interface Props {
-	abilities: IAbility[];
-}
+export const ViewAbilities = () => {
+	const { abilities } = useAbility();
 
-export const ViewAbilities: FC<Props> = ({ abilities }) => {
 	return (
 		<section className='my-28' id='conocimientos'>
 			<article>
