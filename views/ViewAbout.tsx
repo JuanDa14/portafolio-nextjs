@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import { computer } from '../public/lottie';
+import { computer, website } from '../public/lottie';
 
 export const ViewAbout = () => {
 	return (
@@ -22,9 +22,9 @@ export const ViewAbout = () => {
 				</div>
 				{/* //Rotar la imagen de la derecha a la izquierda */}
 				<Lottie
-					className='flex-1 hidden md:flex items-center justify-center max-w-[400px] border-r-[1px] border-zinc-800'
+					className='flex-1 hidden md:flex flex-col-reverse items-center justify-center max-w-[400px] border-r-[1px] border-zinc-800'
 					renderer='svg'
-					animationData={computer}
+					animationData={website}
 					loop={true}
 				/>
 			</article>

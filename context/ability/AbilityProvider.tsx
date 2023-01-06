@@ -22,7 +22,6 @@ export const AbilityProvider: FC<Props> = ({ children }) => {
 	const getAbilities = async () => {
 		setLoading(true);
 		const { data } = await myApi.get<IAbility[]>('/ability');
-		console.log(data, 'abilities');
 		dispatch({ type: '[ABILITY] - Get-Abilities', payload: data });
 		setLoading(false);
 	};

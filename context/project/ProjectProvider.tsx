@@ -23,7 +23,6 @@ export const ProjectProvider: FC<Props> = ({ children }) => {
 	const getProjects = async () => {
 		setLoading(true);
 		const { data } = await myApi.get<IProject[]>('/project');
-		console.log(data, 'projects');
 		dispatch({ type: '[PROJECT] - Get-Projects', payload: data });
 		setLoading(false);
 	};

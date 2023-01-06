@@ -3,10 +3,12 @@ import { ToastContainer } from 'react-toastify';
 import { ViewAbilities, ViewAbout, ViewContact, ViewHeader, ViewProjects } from '../views';
 
 import Layout from '../components/layout/Layout';
+import ShowArrow from '../components/ui/ShowArrow';
 
 const HomePage: NextPage = () => {
 	return (
 		<Layout>
+			<ShowArrow />
 			<ViewHeader />
 			<ViewAbout />
 			<ViewAbilities />
