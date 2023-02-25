@@ -29,7 +29,10 @@ export const ViewContact = () => {
 	};
 
 	return (
-		<section className='mt-20 flex items-center justify-between' id='contacto'>
+		<section
+			className='mt-20 flex items-center justify-between lg:max-w-5xl xl:max-w-6xl mx-auto -z-10'
+			id='contacto'
+		>
 			<article>
 				<h2 className='font-bold capitalize text-step-1 mb-5'>Contáctame</h2>
 				<p className='mb-5 text-step--1'>
@@ -80,7 +83,7 @@ export const ViewContact = () => {
 					<div className='w-full flex justify-end'>
 						<button
 							disabled={loading}
-							className='border rounded-md py-2 px-3 text-step--1 text-white font-bold disabled:border-gray-500 disabled:text-gray-500 hover:border-green-main hover:text-green-main transition-colors duration-300'
+							className='border rounded-md py-2 px-3 text-step--1 border-gray-400 text-gray-400 font-bold disabled:border-gray-400 disabled:text-gray-400 hover:border-white hover:text-white transition-colors duration-300'
 							type='submit'
 						>
 							{loading ? 'Enviando...' : 'Enviar Mensaje'}
@@ -88,7 +91,7 @@ export const ViewContact = () => {
 					</div>
 				</form>
 			</article>
-			<article className='hidden md:flex w-6/12 mx-auto relative'>
+			<article className='hidden md:flex w-8/12 mx-auto relative'>
 				<Lottie animationData={contact} loop={true} />
 			</article>
 		</section>

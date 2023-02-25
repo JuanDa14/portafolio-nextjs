@@ -17,12 +17,8 @@ class MyDocument extends Document {
 						href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,900;1,700&family=Roboto:wght@400;700;900&display=swap'
 						rel='stylesheet'
 					/>
-					<link
-						rel='stylesheet'
-						href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
-					/>
 				</Head>
-				<body className='animate__animated animate__fadeIn'>
+				<body>
 					<Main />
 					<NextScript />
 				</body>

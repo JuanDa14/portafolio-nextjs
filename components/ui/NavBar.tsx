@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { BsCodeSlash } from 'react-icons/bs';
+import Loader from './Loader';
 
 export const NavBar = () => {
 	const router = useRouter();
@@ -16,8 +17,9 @@ export const NavBar = () => {
 	}, [activeLink, router]);
 
 	return (
-		<header className='min-w-full font-roboto border-b border-twitch-light shadow-lg'>
-			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:px-10 lg:max-w-[1200px] xl:max-w-[1400px]'>
+		<header className='min-w-full bg-twitch-dark font-roboto border-b border-twitch-light shadow-lg fixed top-0 left-0 z-50'>
+			<Loader />
+			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:max-w-5xl xl:max-w-6xl md:px-0'>
 				<div className='hidden sm:flex text-step-1'>
 					<Link href='#inicio' passHref legacyBehavior>
 						<a className='cursor-pointer'>
