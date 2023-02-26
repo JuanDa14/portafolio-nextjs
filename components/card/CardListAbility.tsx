@@ -14,7 +14,7 @@ export const CardListAbility: FC<Props> = ({ abilities, type }) => {
 			{abilities
 				.filter((f) => f.type === type)
 				.map((a) => (
-					<CardAbility {...a} key={a._id} />
+					<CardAbility {...a} key={a.name} />
 				))}
 		</ul>
 	);

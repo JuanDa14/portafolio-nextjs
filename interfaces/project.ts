@@ -19,7 +19,7 @@ export type ITechnologie =
 	| 'TypeORM';
 
 export interface IProject {
-	_id: string;
+	_id?: string;
 	title: string;
 	description: string;
 	technologies: string[];

@@ -1,22 +1,16 @@
-import { NextPage, GetServerSideProps } from 'next';
+import { NextPage } from 'next';
 import { ToastContainer } from 'react-toastify';
 import Layout from '../components/layout/Layout';
 
 import { ViewAbilities, ViewContact, ViewHeader, ViewProjects } from '../views';
-import { abilityService, projectService } from '../services';
-import { IAbility, IProject } from '../interfaces';
+import { seed } from '../data';
 
-interface Props {
-	projects: IProject[];
-	abilities: IAbility[];
-}
-
-const HomePage: NextPage<Props> = ({ abilities, projects }) => {
+const HomePage: NextPage = () => {
 	return (
 		<Layout>
 			<ViewHeader />
-			<ViewAbilities abilities={abilities} />
-			<ViewProjects projects={projects} />
+			<ViewAbilities abilities={seed.abilities} />
+			<ViewProjects projects={seed.projects} />
 			<ViewContact />
 			<ToastContainer
 				autoClose={3000}
@@ -29,15 +23,3 @@ const HomePage: NextPage<Props> = ({ abilities, projects }) => {
 };
 
 export default HomePage;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-	const { data: projects } = await projectService.getProjects();
-	const { data: abilities } = await abilityService.getAbilities();
-
-	return {
-		props: {
-			projects,
-			abilities,
-		},
-	};
-};

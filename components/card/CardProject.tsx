@@ -3,8 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { IProject } from '../../interfaces';
-import { formatDate } from '../../utils';
 import { BsGithub } from 'react-icons/bs';
+import { DiVisualstudio } from 'react-icons/di';
 
 export const CardProject: FC<IProject> = ({
 	title,
@@ -13,23 +13,20 @@ export const CardProject: FC<IProject> = ({
 	githubUrl,
 	imageUrl,
 	websiteUrl,
-	updatedAt,
 }) => {
 	return (
-		<li className=' list-none bg-twitch-light/30 border border-zinc-800 rounded-md shadow-md hover:scale-[1.02] transition-transform duration-300 ease-in-out'>
+		<li className=' list-none bg-twitch-light/30 border rounded-md shadow-md border-zinc-800 hover:scale-[1.02] transition-transform duration-300 ease-in-out'>
 			<div>
-				<Link title='Website' href={websiteUrl} target='_blank'>
-					<figure>
-						<Image
-							priority
-							className='rounded-t-md w-full h-56 object-cover object-center'
-							src={imageUrl}
-							alt={title}
-							width={500}
-							height={500}
-						/>
-					</figure>
-				</Link>
+				<figure>
+					<Image
+						priority
+						className='rounded-t-md w-full h-48 object-cover object-center'
+						src={imageUrl}
+						alt={title}
+						width={500}
+						height={500}
+					/>
+				</figure>
 				<div>
 					<div className='px-5 py-5 flex flex-col gap-2'>
 						<h2 className='font-bold text-xl whitespace-nowrap text-ellipsis overflow-hidden text-green-main'>
@@ -50,14 +47,24 @@ export const CardProject: FC<IProject> = ({
 									</figure>
 								))}
 							</div>
-							<Link
-								title='Github'
-								href={githubUrl}
-								target='_blank'
-								className='text-white transition-colors duration-300 ease-in-out'
-							>
-								<BsGithub size={20} />
-							</Link>
+							<div className='flex gap-3 items-center'>
+								<Link
+									title='Website'
+									href={websiteUrl}
+									target='_blank'
+									className='text-gray-400 hover:text-white transition-colors duration-300 ease-in-out'
+								>
+									<DiVisualstudio size={20} />
+								</Link>
+								<Link
+									title='Github'
+									href={githubUrl}
+									target='_blank'
+									className='text-gray-400 hover:text-white transition-colors duration-300 ease-in-out'
+								>
+									<BsGithub size={20} />
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>

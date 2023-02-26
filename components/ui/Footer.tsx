@@ -34,7 +34,7 @@ export const Footer = () => {
 	return (
 		<footer className='px-5 py-5 mt-10 text-center font-semibold text-step--0 font-roboto border-t border-twitch-light md:px-0'>
 			<div className='lg:max-w-5xl xl:max-w-6xl mx-auto flex flex-col-reverse items-center gap-5 md:gap-10 md:flex-row md:justify-between'>
-				<p>&copy; {new Date().getFullYear()} Juan David Morales Paredes</p>
+				<p>JuanCode&copy;{new Date().getFullYear()}</p>
 				<ul className='flex gap-5'>
 					{socials.map(({ name, icon, url }) => (
 						<li

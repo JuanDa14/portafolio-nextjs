@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 import { BsCodeSlash } from 'react-icons/bs';
-import Loader from './Loader';
+import { Loader } from './index';
 
 export const NavBar = () => {
 	const router = useRouter();
@@ -32,7 +32,7 @@ export const NavBar = () => {
 						<li>
 							<Link href='#conocimientos' passHref legacyBehavior>
 								<a
-									className={`flex items-center gap-1 p-1 hover:text-green-main ${
+									className={`transition-colors duration-300 ease-in-out flex items-center gap-1 p-1 hover:text-green-main ${
 										activeLink === '#conocimientos' && 'text-green-main'
 									}`}
 								>
@@ -43,7 +43,7 @@ export const NavBar = () => {
 						<li>
 							<Link href='#proyectos' passHref legacyBehavior>
 								<a
-									className={`flex items-center gap-1 p-1 hover:text-green-main ${
+									className={`transition-colors duration-300 ease-in-out flex items-center gap-1 p-1 hover:text-green-main ${
 										activeLink === '#proyectos' && 'text-green-main'
 									}`}
 								>
@@ -54,7 +54,7 @@ export const NavBar = () => {
 						<li>
 							<Link href='#contacto' passHref legacyBehavior>
 								<a
-									className={`flex items-center gap-1 p-1 hover:text-green-main ${
+									className={`transition-colors duration-300 ease-in-out flex items-center gap-1 p-1 hover:text-green-main ${
 										activeLink === '#contacto' && 'text-green-main'
 									}`}
 								>

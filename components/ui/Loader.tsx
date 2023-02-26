@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-function Loader() {
+export const Loader = () => {
 	const containerProgress = useRef() as React.MutableRefObject<HTMLDivElement>;
 	const progressBar = useRef() as React.MutableRefObject<HTMLDivElement>;
 
@@ -51,6 +51,4 @@ function Loader() {
 			/>
 		</div>
 	);
-}
-
-export default Loader;
+};
