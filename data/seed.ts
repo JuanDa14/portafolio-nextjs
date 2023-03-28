@@ -1,4 +1,13 @@
-import { IAbility, IProject } from '../interfaces';
+import { BsInstagram, BsGithub, BsLinkedin, BsFacebook } from 'react-icons/bs';
+import { TypedOptions } from 'typed.js';
+import { IAbility, IProject, SocialMedia } from '../interfaces';
+
+export const options: TypedOptions = {
+	strings: ['FullStack Developer'],
+	typeSpeed: 50,
+	backSpeed: 50,
+	loop: true,
+};
 
 export const abilities: IAbility[] = [
 	{
@@ -18,6 +27,12 @@ export const abilities: IAbility[] = [
 		type: 'Frontend',
 		level: 'Intermedio',
 		imageUrl: '/icons/nextjs.svg',
+	},
+	{
+		name: 'Nestjs',
+		type: 'Backend',
+		level: 'Intermedio',
+		imageUrl: '/icons/nest.svg',
 	},
 	{
 		name: 'Bootstrap',
@@ -139,5 +154,28 @@ export const projects: IProject[] = [
 		githubUrl: 'https://github.com/JuanDa14/treelink-frontend',
 		websiteUrl: 'https://treeliink.vercel.app',
 		updatedAt: '1668977345721',
+	},
+];
+
+export const socials: SocialMedia[] = [
+	{
+		name: 'Linkedin',
+		Icon: BsLinkedin,
+		url: 'https://www.linkedin.com/in/juan-david-morales-paredes-617342224',
+	},
+	{
+		name: 'Github',
+		Icon: BsGithub,
+		url: 'https://github.com/JuanDa14',
+	},
+	{
+		name: 'Instagram',
+		Icon: BsInstagram,
+		url: 'https://www.instagram.com/ju4n.code/',
+	},
+	{
+		name: 'Facebook',
+		Icon: BsFacebook,
+		url: 'https://www.facebook.com/juandavid.moralesparedes',
 	},
 ];

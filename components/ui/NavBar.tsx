@@ -19,7 +19,7 @@ export const NavBar = () => {
 	return (
 		<header className='min-w-full bg-twitch-dark font-roboto border-b border-twitch-light shadow-lg fixed top-0 left-0 z-50'>
 			<Loader />
-			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:max-w-5xl xl:max-w-6xl md:px-0'>
+			<div className='px-5 py-4 mx-auto flex justify-between items-center lg:max-w-5xl xl:max-w-6xl'>
 				<div className='hidden sm:flex text-step-1'>
 					<Link href='#inicio' passHref legacyBehavior>
 						<a className='cursor-pointer'>

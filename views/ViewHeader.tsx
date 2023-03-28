@@ -3,23 +3,18 @@ import Link from 'next/link';
 
 import Lottie from 'lottie-react';
 
-import Typed, { TypedOptions } from 'typed.js';
+import Typed from 'typed.js';
 
 import { coder } from '../public/lottie';
-
-const options: TypedOptions = {
-	strings: ['FullStack Developer'],
-	typeSpeed: 50,
-	backSpeed: 50,
-	loop: true,
-};
+import { seed } from '../data';
+import { SocialLinks } from '../components';
 
 export const ViewHeader = () => {
 	const span = useRef() as React.MutableRefObject<HTMLInputElement>;
 	const typed = useRef() as React.MutableRefObject<Typed>;
 
 	useEffect(() => {
-		typed.current = new Typed(span.current, options);
+		typed.current = new Typed(span.current, seed.options);
 
 		return () => {
 			typed.current.destroy();
@@ -42,7 +37,8 @@ export const ViewHeader = () => {
 						móviles. Mi objetivo es siempre construir productos que proporcionen experiencias
 						simples, bonitas y de alta calidad.
 					</p>
-					<div className='mt-3 text-step-1 flex items-center'>
+					<div className='mt-3 text-step-1 flex items-center justify-between'>
+						<SocialLinks socials={seed.socials} />
 						<Link href='/CV - Juan Morales.pdf' passHref legacyBehavior title='Descargar CV'>
 							<a
 								download='CV-Juan-Morales'
@@ -70,7 +66,7 @@ export const ViewHeader = () => {
 				</div>
 				<Lottie
 					renderer='svg'
-					className='w-6/12 md:w-7/12 max-w-[480px] h-full -z-10'
+					className='w-auto sm:max-w-sm md:max-w-md h-full -z-10'
 					animationData={coder}
 					loop
 					autoplay={true}
