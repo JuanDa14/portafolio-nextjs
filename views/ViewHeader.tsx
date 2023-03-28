@@ -7,7 +7,7 @@ import Typed from 'typed.js';
 
 import { coder } from '../public/lottie';
 import { seed } from '../data';
-import { SocialLinks } from '../components';
+import SocialLinks from '../components/social/SocialLinks';
 
 export const ViewHeader = () => {
 	const span = useRef() as React.MutableRefObject<HTMLInputElement>;

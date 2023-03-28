@@ -24,3 +24,5 @@ export const SocialLinks: FC<Props> = ({ socials }) => {
 		</ul>
 	);
 };
+
+export default SocialLinks;
